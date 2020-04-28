@@ -1,0 +1,218 @@
+//  ====================================
+//  @author: SYED
+//  @package: Global Buttons
+//  ====================================
+
+.btn {
+  font-weight: 400;
+  border-width: 2px;
+  transition: 0.3s ease all;
+  overflow: hidden;
+  position: relative;
+
+  // Default button
+  &__default {
+    @include button-variant($white, $primary-color, $primary-color, $alt-color, '', $alt-color);
+    @include borderRadius(20px);
+
+    z-index: 1;
+
+    &:hover, &:focus {
+      color: $black !important;
+      background-color: white;
+      text-shadow: none;
+    }
+
+    &:hover:before, &:focus:before {
+      bottom: 0%;
+      top: auto;
+      height: 100%;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 0px;
+      width: 100%;
+      z-index: -1;
+      content: '';
+      color: #000 !important;
+      background: $white;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+
+  }
+
+  &__inverse {
+    @include button-variant($primary-color, $white, $white);
+    @include borderRadius(5px);
+  }
+
+  // White button
+  &__white {
+    @include button-variant($primary-color, $white, $white);
+    @include borderRadius(5px);
+    font-weight: 700;
+
+    &:hover, &:focus {
+      color: $white !important;
+      background-color: $white;
+      text-shadow: none;
+    }
+
+    &:hover:before, &:focus:before {
+      bottom: 0%;
+      top: auto;
+      height: 100%;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 0px;
+      width: 100%;
+      z-index: -1;
+      content: '';
+      color: #000 !important;
+      background: $primary-color;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+
+  }
+
+  // black button
+  &__black {
+    @include button-variant($white, $black, $black);
+    font-weight: 700;
+    @include borderRadius(20px);
+
+    z-index: 1;
+
+    &:hover, &:active, &:focus {
+      color: $black !important;
+      background-color: $white !important;
+      text-shadow: none;
+      border-color: $black;
+    }
+
+    &:hover:before, &:focus:before {
+      bottom: 0%;
+      top: auto;
+      height: 100%;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 0px;
+      width: 100%;
+      z-index: -1;
+      content: '';
+      color: #fff !important;
+      background: $white;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+
+  }
+
+  // White Hollow / Ghost button
+  &__white-hollow {
+    @include button-variant($white, transparent, $white, rgba($black, .2));
+    @include borderRadius(5px);
+  }
+
+  // Hollow / Ghost button
+  &__hollow {
+    @include button-variant($primary-color, transparent, $primary-color);
+    @include borderRadius(20px);
+
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+    &:hover, &:focus {
+      color: $white !important;
+      background-color: white;
+      text-shadow: none;
+    }
+
+    &:hover:before, &:focus:before {
+      bottom: 0%;
+      top: auto;
+      height: 100%;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 0px;
+      width: 100%;
+      z-index: -1;
+      content: '';
+      color: #000 !important;
+      background: $primary-color;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+
+  }
+
+  // Notify Me
+  &__notify {
+    @include button-variant($black, transparent, $black);
+    @include borderRadius(5px);
+  }
+
+  // Grey variant
+  &__grey {
+    @include button-variant($white, darken($dark-grey, 30%), darken($dark-grey, 30%));
+    @include borderRadius(5px);
+  }
+
+  // Grey variant
+  &__grey-hollow {
+    @include button-variant(darken($dark-grey, 18%), transparent, darken($dark-grey, 18%),
+            darken($dark-grey, 18%), $white, darken($dark-grey, 18%));
+    @include borderRadius(20px);
+
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+
+    &:hover, &:focus {
+      color: $white !important;
+      background-color: white;
+      text-shadow: none;
+    }
+
+    &:hover:before, &:focus:before {
+      bottom: 0;
+      top: auto;
+      height: 100%;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 0px;
+      width: 100%;
+      z-index: -1;
+      content: '';
+      color: #000 !important;
+      background: darken($dark-grey, 18%);
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    }
+
+  }
+
+}
+

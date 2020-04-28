@@ -1,0 +1,75 @@
+
+/* ------------------------------------------------------------------------------------
+Responsiv style sheet :: || (variables)
+---------------------------------------------------------------------------------------*/
+$bp-xsmall: 1px;
+$bp-small:  576px;
+$bp-medium: 768px;
+$bp-large:  992px;
+$bp-xlarge: 1200px;
+
+/* ------------------------------------------------------------------------------------
+Responsiv style sheet :: || (@media screen)
+---------------------------------------------------------------------------------------*/
+@mixin bp-xsmall{
+    @media (min-width: $bp-xsmall){
+        @content;
+    }
+}
+
+@mixin bp-small{
+    @media (min-width: $bp-small){
+        @content;
+    }
+}
+
+@mixin bp-medium{
+    @media (min-width: $bp-medium){
+        @content;
+    }
+}
+
+@mixin bp-large{
+    @media (min-width: $bp-large){
+        @content;
+    }
+}
+
+@mixin bp-xlarge{
+    @media (min-width: $bp-xlarge){
+        @content;
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------
+Default size ::
+---------------------------------------------------------------------------------------*/
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include bp-xsmall{
+        max-width: 100%;
+    }
+
+    @include bp-small{
+        max-width: 540px;
+    }
+    
+    @include bp-medium{
+        max-width: 720px;
+    }
+    
+    @include bp-large{
+        max-width: 960px;
+    }
+    
+	@include bp-xlarge{
+        max-width: 1170px;
+	}
+
+}

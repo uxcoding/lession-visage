@@ -1,0 +1,45 @@
+{
+  "name": "lession-gulp",
+  "version": "1.0.0",
+  "description": "It is starter template for project in gulp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxcoding/lession-gulp.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "responsive",
+    "front-end",
+    "web."
+  ],
+  "author": "Atul Rawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uxcoding/lession-gulp/issues"
+  },
+  "homepage": "https://github.com/uxcoding/lession-gulp#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "popper.js": "^1.16.0",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,151 @@
+//  ==========================================
+//  @author: Nishant Chauhan
+//  @package: Device / Resolution breakpoints
+//  ==========================================
+
+// ============== IMPORTANT ==================
+// Follow the sequence of media-queries.
+// Only use the pre-defined media queries in this file.
+// Avoid override of css by media queries, write properties to be modified by
+// another media query in device specific pre-defined breakpoint to avoid conflict.
+// Items that will remain constant across all screens should only be written directly in a selector, rest all
+// in media queries.
+// ============== IMPORTANT ==================
+
+// Default style breakpoint for large screens
+@mixin desktop {
+  @media (min-width: ($screen-md)) {
+    // 1024
+    @content;
+  }
+}
+
+// Below Desktop
+@mixin below__desktop {
+  @media (max-width: ($screen-md - 1)) {
+    // 1023
+    @content;
+  }
+}
+
+// Tablet / iPad specific
+@mixin tablet {
+  @media (min-width: ($screen-sm)) and (max-width: ($screen-md)) {
+    // 768 to 1024
+    @content;
+  }
+}
+
+// Tablet portrait
+@mixin tablet__portrait {
+  @media (min-width: ($screen-sm)) and (max-width: ($screen-md)) and (orientation: portrait) {
+    // 768 to 1023
+    @content;
+  }
+}
+
+// Tablet landscape
+@mixin tablet__landscape {
+  @media (min-width: ($screen-sm)) and (max-width: ($screen-md)) and (orientation: landscape) {
+    // 768 to 1023
+    @content;
+  }
+}
+
+// Mobile / Hand-held devices {currently used for tablet portrait & phones}
+@mixin phone {
+  @media (max-width: ($screen-sm - 1)) {
+    // 767
+    @content;
+  }
+}
+
+// Tablet landscape
+@mixin phone__landscape {
+  @media (max-width: ($screen-sm)) and (orientation: landscape) {
+    // 768 to 1023
+    @content;
+  }
+}
+
+// For designs above phone {Includes both desktop & tablets}
+@mixin above__phone {
+  @media (min-width: ($screen-sm)) {
+    // 768
+    @content;
+  }
+}
+
+// Small devices like iPhone 5s & others.
+@mixin small__phone {
+  @media (max-width: ($screen-xs)) {
+    // 480
+    @content;
+  }
+}
+
+// iPhone 6 etc.
+@mixin iPhone_7_below {
+  @media only screen and (max-width: 420px) and (max-height: 700px)  and (orientation: portrait) {
+    @content;
+  }
+}
+
+// For tablet portrait & phones
+@mixin below_tablet_portrait {
+  // For tablet portrait
+  @media (min-width: ($screen-sm)) and (max-width: ($screen-md)) and (orientation: portrait) {
+    // 768 to 1023
+    @content;
+  }
+
+  // For phones
+  @media (max-width: ($screen-sm - 1)) {
+    // 767
+    @content;
+  }
+}
+
+//  =============================================
+//  *********** Breakpoints for hacks ***********
+//  ** @note: Only use these as a last option. **
+//  =============================================
+
+// IE specific {for hacks, if any}
+@mixin ie {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+// IE Edge specific {for hacks, if any}
+@mixin ie-edge {
+  @supports (-ms-ime-align: auto) {
+    @content
+  }
+}
+
+// Safari Specific {for hacks, if any}
+
+@mixin safari {
+  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    @content
+  }
+}
+
+// For iOS devices only {for hacks, if any}
+
+@mixin ios {
+  @media not all and (min-resolution: .001dpcm) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+
+// Hover state / styles mixin
+@mixin hover_styles {
+  &:hover, &:focus {
+    @content;
+  }
+}

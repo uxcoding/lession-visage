@@ -1,0 +1,27 @@
+/* ----------------------------------------------------------------
+Display Flex Content ( display )
+------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------
+Justify Content ( justify_content )
+------------------------------------------------------------------- */
+
+@function justify_content($position){
+    $map: (
+        "$flex_start" : flex-start,
+        "$flex_end" : flex-end,
+        "$space-around" : space-around,
+        "$space-between" : space-between,
+        "$space-evenly" : space-evenly,
+        "$center" : center
+    );
+
+    @each $name, $names in $map {
+        @if ($name == $position) {
+            @return $map;
+        }
+    }
+}
+
+

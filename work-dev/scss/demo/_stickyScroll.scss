@@ -1,0 +1,120 @@
+//  ================================================
+//  ================================================
+//  @author: Akshay Anand
+//  @package: Create style specific to homepage here
+//  ================================================
+
+.category-menu {
+  transition: .2s linear all;
+
+  &__spacer {
+    min-height: 78px;
+    display: none;
+  }
+
+  @include phone {
+    position: fixed;
+    bottom: 78px;
+    left: 0;
+    right: 0;
+    transform: none !important;
+    z-index: 9;
+
+    max-width: 50vw;
+    margin: 0 auto;
+
+    transition: 0.3s all ease;
+  }
+
+  &.sticky {
+    @include phone {
+      bottom: -26px;
+      position: absolute;
+    }
+  }
+}
+
+.sticky__menu {
+  width: 100%;
+  z-index: 49;
+  margin-top: 0;
+
+  position: fixed;
+
+  @include above__phone {
+    top: 0;
+    left: 0;
+    box-shadow: 0px 1px 2px 1px #e8e8e8;
+  }
+
+}
+
+.normal__pos {
+  transform: translateY(0px) !important;
+}
+
+.byop__nav-wrapper {
+  @include phone {
+    display: none;
+    min-width: 80vw;
+    position: absolute !important;;
+    left: -15vw !important;;
+    right: unset !important;
+    transform-origin: bottom;
+    transform: scale(0);
+    transition: 0.1s linear all !important;
+  }
+
+
+  &.showMenu {
+    @include phone {
+      display: block;
+    }
+  }
+
+}
+
+.phoneMenu {
+  display: none;
+
+  @include phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    padding: $base-spacing-unit - 5 $base-spacing-unit * 2;
+    box-shadow: 0px 1px 30px -9px #000000;
+    transition: 0.2s ease-in-out;
+  }
+
+
+  img {
+    margin-right: 10px;
+    max-width: 15px;
+  }
+
+  p {
+    margin: 0;
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.menu-overlay {
+  display: none;
+
+  @include phone {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 8;
+    top: 0;
+    left: 0;
+  }
+
+}

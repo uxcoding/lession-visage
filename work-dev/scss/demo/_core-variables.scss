@@ -1,0 +1,96 @@
+//  ============================================
+//  @author: Nishant Chauhan
+//  @package: Base config & style variables
+//  ============================================
+
+//  =====================================================================================
+//  ++++++++++++++++++++++++++++++++ Main variables +++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+$site-container-max-width: 1300px !default; //  Control max width of the application from here.
+$site-container-min-width: 320px !default; //  Control min width of the application from here.
+
+//  =====================================================================================
+//  +++++++++++++++++++++++++++++++++ Font families +++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+$font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-secondary: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-alt: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Font weights
+$base-font-weight: 300;
+//  =====================================================================================
+//  ++++++++++++++++++++++++++++++++ Color variables ++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+
+// Default theme colors
+$primary-color: #EC2E51 !default;
+$secondary-color: #1C2642 !default;
+$alt-color: #EC2E51 !default;
+
+// Base colors
+$white: #ffffff !default;
+$black: #000000 !default;
+
+// Highlight colors
+$grey: #f6f6f6 !default;
+$dark-grey: #bcbcbc !default;
+
+// Content/Text colors
+$text-color-primary: #000000 !default;
+$text-color-greyed: #bcbcbc !default;
+
+// Link/Buttons colors
+$link-primary: $primary-color !default;
+$link-primary-hover: #33b699 !default;
+
+// Other theme variables {add one's that can be configurable later}
+$header-bg: $secondary-color !default;
+$footer-bg: $primary-color !default;
+$site-logo-color: $white !default;
+
+//  =====================================================================================
+//  ++++++++++++++++++++++++++++++++ Other variables ++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+
+// Base grid / space gap
+$base-spacing-unit: 15px !default;
+
+// @todo: remove this to theme specific variables
+$byop-choice-list: 220px !default;   // Build Your Pizza Choice List Width
+
+// Max width for search pop-up internal container
+$search-container: 1350px !default;
+
+//  =====================================================================================
+//  +++++++++++++++++++++++++++++++++ z-indexes +++++++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+
+// Main sticky header wrapper
+$z-sticky-header: 50 !default;
+
+// Menu category selector
+$z-sticky-menu-category: 51 !default;
+
+// Z-index for menu panels
+$z-hamburger-menu: 60 !default;
+$z-hamburger-backdrop: ($z-hamburger-menu - 1) !default;
+
+// Theme Minibag
+$z-minibag: 100 !default;
+
+// User account dropdown
+$z-account-dropdown: ($z-sticky-header + 1);
+
+// Item creator / Pizza builder tooltip
+$z-byp-tooltip: 110 !default;
+$z-ic-preview: ($z-hamburger-backdrop - 1) !default;
+
+//  =====================================================================================
+//  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  =====================================================================================
+
+// ===================================== //
+// ******** Module Customizations ****** //
+@import "../theme/theme-variables";
+// ******** Module Customizations ****** //
+// ===================================== //

@@ -1,0 +1,95 @@
+%heading-2 {
+    margin-bottom: .5rem;
+    display       : block;
+    text-transform: uppercase;
+    color         : $head-primary-color;
+    
+    @include bp-xsmall{
+        font-size: 2rem;
+        line-height   : 2.5rem;
+    }
+    
+    @include bp-medium{
+        font-size     : 2.5rem;
+        line-height   : 3.5rem;
+    }
+
+}
+
+%heading-3 {
+    display       : block;
+    font-size     : 1.25rem;
+    line-height   : 1.75rem;
+    text-transform: uppercase;
+}
+
+%heading-4 {
+    display    : block;
+    font-size  : 1.35rem;
+    line-height: 1.85rem;
+}
+
+%heading-5 {
+    display    : block;
+    font-size  : 1rem;
+    line-height: 1.5rem;
+}
+
+%design-line {
+    margin   : 0 auto 2rem auto;
+    padding  : 0;
+    width    : 100%;
+    max-width: 260px;
+    height   : 32px;
+    @include display-flex();
+    @include justify-content(space-between);
+    @include align-items(center);
+    position           : relative;
+    background-image   : url("../../work-pro/img/divider-bg.png");
+    background-size    : 32px 32px;
+    background-repeat  : no-repeat;
+    background-position: center center;
+
+    &:before,
+    &:after {
+        content   : "";
+        width     : 42%;
+        border-top: 2px solid $border-primary-color;
+    }
+}
+
+%btn-primary {
+    margin          : 0;
+    padding         : .75rem 2.5rem;
+    display         : inline-block;
+    font-size       : 1rem;
+    line-height     : 1.5rem;
+    color           : #e9c7c1;
+    text-transform  : uppercase;
+    font-family     : 'Oswald', sans-serif;
+    background-color: $btn-bg-primary-color;
+    @include add-radius(5rem);
+    @include transition(all 0.3s linear 0s);
+
+    &:focus,
+    &:hover {
+        background-color: $btn-bg-hover-primary-color;
+    }
+}
+
+%btn-view {
+    margin          : 0;
+    padding         : .75rem 1.5rem;
+    display         : inline-block;
+    font-size       : 1rem;
+    line-height     : normal;
+    color           : #e9c7c1;
+    background-color: $btn-bg-primary-color;
+    @include transition(all 0.5s ease-in-out 0s);
+    @include add-radius(2rem);
+
+    &:focus,
+    &:hover {
+        background-color: $btn-bg-hover-primary-color;
+    }
+}
